@@ -647,7 +647,7 @@
                 // タイトル
                 const titleFontSize = calculateResponsiveSize(this, 0.08);
                 const titleText = this.add.text(width / 2, height * 0.1, 'なんばーめもりー', {
-                    fontSize: ${titleFontSize}px,
+                    fontSize: `${titleFontSize}px`,
                     fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                     fill: COLORS.primaryDark,
                     align: 'center',
@@ -669,7 +669,7 @@
                 // サブタイトル
                 const subtitleFontSize = calculateResponsiveSize(this, 0.04);
                 this.add.text(width / 2, height * 0.17, 'げーむせっていをえらんでね', {
-                    fontSize: ${subtitleFontSize}px,
+                    fontSize: `${subtitleFontSize}px`,
                     fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                     fill: '#000',
                     align: 'center',
@@ -714,8 +714,7 @@
                             { label: '3x3', value: 3 },
                             { label: '4x4', value: 4 },
                             { label: '5x5', value: 5 }
-                        ],
-                        buttonsArray: 'gridSizeButtons',
+                        ],                        buttonsArray: 'gridSizeButtons',
                         onSelect: (button, value) => {
                             this.selectedGridSize = value;
                             this.gridSizeButtons.forEach(btn => {
@@ -761,7 +760,7 @@
                     // セクションタイトル
                     const sectionFontSize = calculateResponsiveSize(this, 0.05);
                     this.add.text(width / 2, height * option.yPosition, option.title, {
-                        fontSize: ${sectionFontSize}px,
+                        fontSize: `${sectionFontSize}px`,
                         fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                         fill: '#000',
                         align: 'center',
@@ -886,8 +885,8 @@
                 
                 // レベル表示
                 const levelFontSize = calculateResponsiveSize(this, 0.04);
-                this.add.text(width * 0.05, height * 0.05, れべる: ${this.level}, {
-                    fontSize: ${levelFontSize}px,
+                this.add.text(width * 0.05, height * 0.05, `れべる: ${this.level}`, {
+                    fontSize: `${levelFontSize}px`,
                     fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                     fill: '#000'
                 }).setOrigin(0, 0);
@@ -898,7 +897,7 @@
                 // カウントダウン数字
                 const countFontSize = calculateResponsiveSize(this, 0.2);
                 this.countText = this.add.text(width / 2, height / 2, this.count, {
-                    fontSize: ${countFontSize}px,
+                    fontSize: `${countFontSize}px`,
                     fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                     fill: '#FF0000',
                     align: 'center',
@@ -956,7 +955,7 @@
                     // 「スタート！」テキスト表示
                     const startFontSize = calculateResponsiveSize(this, 0.1);
                     const startText = this.add.text(this.scale.width / 2, this.scale.height / 2, 'スタート！', {
-                        fontSize: ${startFontSize}px,
+                        fontSize: `${startFontSize}px`,
                         fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                         fill: '#4CAF50',
                         align: 'center',
@@ -1017,8 +1016,8 @@
                 
                 // レベル表示
                 const levelFontSize = calculateResponsiveSize(this, 0.04);
-                this.add.text(width * 0.05, height * 0.05, れべる: ${this.level}, {
-                    fontSize: ${levelFontSize}px,
+                this.add.text(width * 0.05, height * 0.05, `れべる: ${this.level}`, {
+                    fontSize: `${levelFontSize}px`,
                     fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                     fill: '#000'
                 }).setOrigin(0, 0);
@@ -1036,8 +1035,8 @@
                 );
                 
                 // レベルテキスト
-                this.add.text(width * 0.7, height * 0.02, レベル ${this.level}/${maxLevel}, {
-                    fontSize: ${calculateResponsiveSize(this, 0.03)}px,
+                this.add.text(width * 0.7, height * 0.02, `レベル ${this.level}/${maxLevel}`, {
+                    fontSize: `${calculateResponsiveSize(this, 0.03)}px`,
                     fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                     fill: '#000'
                 }).setOrigin(0.5, 0);
@@ -1139,7 +1138,7 @@
                     // 数字のテキストオブジェクトを作成
                     const numberFontSize = calculateResponsiveSize(this, 0.06);
                     const numberText = this.add.text(cell.x, cell.y, num, {
-                        fontSize: ${numberFontSize}px,
+                        fontSize: `${numberFontSize}px`,
                         fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                         fill: '#fff',
                         backgroundColor: Phaser.Display.Color.IntegerToColor(COLORS.danger).rgba,
@@ -1492,9 +1491,7 @@
                     if (this.gameMode === 'number' && cell.number !== null) {
                         const numberFontSize = calculateResponsiveSize(this, 0.06);
                         const numberText = this.add.text(cell.x, cell.y, cell.number, {
-                            fontSize: ${numberFontSize}px,
-
-                                            fontSize: ${numberFontSize}px,
+                            fontSize: `${numberFontSize}px`,
                             fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                             fill: '#fff',
                             backgroundColor: Phaser.Display.Color.IntegerToColor(COLORS.success).rgba,
@@ -1533,7 +1530,7 @@
                 // クリアテキスト
                 const clearFontSize = calculateResponsiveSize(this, 0.08);
                 const clearText = this.add.text(width / 2, height * 0.2, 'クリア！', {
-                    fontSize: ${clearFontSize}px,
+                    fontSize: `${clearFontSize}px`,
                     fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                     fill: Phaser.Display.Color.IntegerToColor(COLORS.warning).rgba,
                     align: 'center',
@@ -1556,7 +1553,7 @@
                 const messageFontSize = calculateResponsiveSize(this, 0.06);
                 const randomMessage = Phaser.Utils.Array.GetRandom(this.messages);
                 const messageText = this.add.text(width / 2, height * 0.35, randomMessage, {
-                    fontSize: ${messageFontSize}px,
+                    fontSize: `${messageFontSize}px`,
                     fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                     fill: '#000',
                     align: 'center',
@@ -1695,7 +1692,7 @@
                 // ゲームオーバーのテキスト
                 const gameOverFontSize = calculateResponsiveSize(this, 0.08);
                 const gameOverText = this.add.text(width / 2, height * 0.2, 'ゲームオーバー', {
-                    fontSize: ${gameOverFontSize}px,
+                    fontSize: `${gameOverFontSize}px`,
                     fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                     fill: '#FF0000',
                     align: 'center',
@@ -1720,7 +1717,7 @@
                     if (this.gameMode === 'number' && cell.number !== null) {
                         const numberFontSize = calculateResponsiveSize(this, 0.06);
                         const numberText = this.add.text(cell.x, cell.y, cell.number, {
-                            fontSize: ${numberFontSize}px,
+                            fontSize: `${numberFontSize}px`,
                             fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                             fill: '#fff',
                             backgroundColor: Phaser.Display.Color.IntegerToColor(COLORS.danger).rgba,
@@ -1744,7 +1741,7 @@
                     if (cell) {
                         const xMarkFontSize = calculateResponsiveSize(this, 0.1);
                         const xMark = this.add.text(cell.x, cell.y, '×', {
-                            fontSize: ${xMarkFontSize}px,
+                            fontSize: `${xMarkFontSize}px`,
                             fontFamily: 'Arial Rounded MT Bold, Arial, sans-serif',
                             fill: '#FF0000',
                             stroke: '#fff',
@@ -1858,4 +1855,4 @@
         }, { passive: false });
     </script>
 </body>
-</html>
+</html>                
